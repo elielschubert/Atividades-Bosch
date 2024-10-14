@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Weather Search</title>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Buscar Clima</h1>
+        <form th:action="@{/weather}" method="post">
+            <label for="latitude">Latitude:</label>
+            <input type="text" id="latitude" name="latitude" required />
+
+            <label for="longitude">Longitude:</label>
+            <input type="text" id="longitude" name="longitude" required />
+
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        text-align: center;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        background-color: aqua;
+    }
+</style>
+
+</html>

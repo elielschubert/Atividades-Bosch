@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultados do Clima</title>
+</head>
+<body>
+<h1>Resultados do Clima</h1>
+<div th:if="${weather != null}">
+    <p>Temperatura: <span th:text="${weather.current_weather.temperature}"></span> °C</p>
+    <p>Velocidade do Vento: <span th:text="${weather.current_weather.windspeed}"></span> km/h</p>
+</div>
+<a href="/weather">Voltar</a>
+</body>
+</html>
